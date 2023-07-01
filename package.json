@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "nodemon server.js",
     "run": "npm run dev",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npm run build"
   },
   "author": "Sandeep Lakhiwal",
   "license": "ISC",

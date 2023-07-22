@@ -22,14 +22,7 @@ export const createCourse = catchAssyncError(async (req, res, next) => {
     description,
     category,
     createdBy,
-    lectures: {
-      title: "temp",
-      description: "This is an temp description for creation of the course.",
-      video: {
-        public_id: "temp",
-        url: "temp",
-      },
-    },
+
     poster: {
       public_id: myCloud.public_id,
       url: myCloud.secure_url,

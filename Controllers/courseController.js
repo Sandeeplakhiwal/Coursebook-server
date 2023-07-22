@@ -16,7 +16,7 @@ export const createCourse = catchAssyncError(async (req, res, next) => {
     const fileUri = getDataUri(file);
     myCloud = await cloudinary.v2.uploader.upload(fileUri.content);
   }
-  console.log(myCloud);
+
   await Course.create({
     title,
     description,

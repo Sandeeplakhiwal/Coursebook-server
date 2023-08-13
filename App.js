@@ -24,13 +24,10 @@ app.use(
   })
 );
 app.use(cookieParser());
-app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://coursebook-sigma.vercel.app"
-  );
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   next();
+// });
 app.use(
   Cors({
     origin: process.env.FRONTEND_URL,

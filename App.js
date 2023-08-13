@@ -27,7 +27,7 @@ app.use(cookieParser());
 
 app.use(
   Cors({
-    origin: "http://localhost:4173",
+    origin: "https://coursebook-sandeeplakhiwal.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })

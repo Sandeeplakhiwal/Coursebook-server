@@ -30,8 +30,8 @@ app.use(cookieParser());
 // });
 app.use(
   Cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
+    origin: "*",
+    // credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );

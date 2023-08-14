@@ -5,11 +5,15 @@ import cookieParser from "cookie-parser";
 import Cors from "cors";
 import path from "path";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // Importing Routes
 import course from "./Routes/courseRoutes.js";
 import user from "./Routes/userRoutes.js";
 import payment from "./Routes/paymentRoutes.js";
 import other from "./Routes/otherRoutes.js";
+import { fileURLToPath } from "url";
 
 const app = express();
 

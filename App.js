@@ -3,17 +3,12 @@ import { config } from "dotenv";
 import ErrorMiddleware from "./Middlewares/Error.js";
 import cookieParser from "cookie-parser";
 import Cors from "cors";
-import path from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Importing Routes
 import course from "./Routes/courseRoutes.js";
 import user from "./Routes/userRoutes.js";
 import payment from "./Routes/paymentRoutes.js";
 import other from "./Routes/otherRoutes.js";
-import { fileURLToPath } from "url";
 
 const app = express();
 
@@ -43,14 +38,6 @@ app.use("/api/v1", course);
 app.use("/api/v1", user);
 app.use("/api/v1", payment);
 app.use("/api/v1", other);
-
-// Serve static files from the 'build' directory (your compiled React app)
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
-
-// Handle all routes by serving the 'index.html' file
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
-});
 
 app.get("/", (req, res) => {
   res.send("<h1>Coursebook official server.</h1>");
